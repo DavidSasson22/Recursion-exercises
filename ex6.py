@@ -62,6 +62,9 @@ def the_winner_is(n, total_of_cals=0):
 
 
 def coin_pick_winner(n):
+    """this function return True if the first layer will win, and Falls is he loose
+    in addition it calculate the number of option that he has in order to win at
+    the first step/ or, if he loose, the opposite"""
     first_step = the_winner_is(n)
     if n >= 9:
         if n % 3 == 0:
