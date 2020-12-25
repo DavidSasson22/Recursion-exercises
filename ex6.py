@@ -41,7 +41,7 @@ def nested_list_sum(lst):
 def coin_pick_winner(n, total_of_cals=0):
     """this function calculates who would win in a Nim game, when both players
     play an optimal game. in addition, it calculate the number of recursion calls,
-    and the number of possible options at the first step for player 1 winning, or loosing if he looses 
+    and the number of possible optionsin the first step for winning, or for loosing
     if player B is the winner"""
     if n == 1 or n == 2:
         print("player 1 won: {} recursion calls were made".format(total_of_cals))
@@ -49,10 +49,13 @@ def coin_pick_winner(n, total_of_cals=0):
         # possible steps at his first turn, for achieve his winning.
         return True, 1
     elif n == 3:
+        print("player 2 won: {} recursion calls were made".format(total_of_cals))
         return False, 2
     elif n == 4:
+        print("player 1 won: {} recursion calls were made".format(total_of_cals))
         return True, 2
     elif n == 6:
+        print("player 2 won: {} recursion calls were made".format(total_of_cals))
         return False, 3
     total_of_cals += 1
     return coin_pick_winner(n-3, total_of_cals)
